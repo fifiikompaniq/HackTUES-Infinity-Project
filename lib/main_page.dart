@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:newproject/detail_page.dart';
-import 'package:newproject/swiper_data.dart';
+import 'package:Planet_trip/detail_page.dart';
+import 'package:Planet_trip/swiper_data.dart';
 import 'constants.dart';
 
 class HomePage extends StatefulWidget {
@@ -97,7 +97,7 @@ class _HomePageState extends State<HomePage> {
                                 bottom: 50.0,
                                 right: 0,
                                 child: Text(
-                                  planets[index].position.toString(),
+                                  planets[index].name.toString(),
                                   style: GoogleFonts.poppins(
                                     fontSize: 150.0,
                                     fontWeight: FontWeight.w900,
@@ -106,7 +106,7 @@ class _HomePageState extends State<HomePage> {
                                 ),
                               ),
                               Hero(
-                                tag: planets[index].position,
+                                tag: planets[index].name,
                                 child: Image.asset(planets[index].iconImage),
                               ),
                             ],
