@@ -12,17 +12,19 @@ url = 'https://api.nasa.gov/planetary/apod?api_key=2lUw74KdgFjcPNvuiMWQ9DIBo6jZt
 
 #Realtime date and time
 now = datetime.datetime.now()
+date = now.strftime("%Y-%m-%d")
+
 
 #Parameters:
 
 params={
-    'date': '2022-02-11',
+    'date': date,
     'hd': True,
     'api_key': API_KEY
 
 }
 def file(data):
-    with open("/asstets/api.json", 'w+') as api_data: 
+    with open(r"C:\Users\Yonna\Documents\GitHub\star-project\assets\api.json", 'w+') as api_data: 
         str(json.dump(data,api_data)) 
 
 
@@ -32,6 +34,11 @@ def main():
     file(json_data) # Adding to file
     #img_url = json_data['hdurl']
     #webbrowser.open(img_url)
+    
+
+
+if __name__ == "__main__":
+    main()
     
 
 
